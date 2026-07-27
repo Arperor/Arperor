@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bgjq3c74ha4ie"]
+
+[ext_resource type="Script" uid="uid://5ehb5vnveegj" path="res://Scripts/Proyectil.gd" id="1_a741h"]
+[ext_resource type="Texture2D" uid="uid://c2utjexwwnpqa" path="res://Texturas/proyectil.png" id="2_lm3un"]
+
+[node name="Proyectil" type="Area2D" unique_id=979626546]
+script = ExtResource("1_a741h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=708029967]
+texture = ExtResource("2_lm3un")

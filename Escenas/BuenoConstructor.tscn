@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dnl26advxgaw1"]
+
+[ext_resource type="Script" uid="uid://cp0bajm6o7s5f" path="res://Scripts/BuenoConstructor.gd" id="1_bn10n"]
+[ext_resource type="Texture2D" uid="uid://2ouhoohgp2sk" path="res://Texturas/enemigi.png" id="2_qpjxd"]
+[ext_resource type="Script" uid="uid://bi2fq6kpda78e" path="res://Scripts/Stats.gd" id="3_tsqck"]
+[ext_resource type="Script" uid="uid://by8jq08suc6fk" path="res://Scripts/IABueno.gd" id="5_tsqck"]
+[ext_resource type="Script" uid="uid://soc1rf3jibdm" path="res://Scripts/BordeSeleccion.gd" id="6_kfutn"]
+[ext_resource type="PackedScene" uid="uid://cr77h3wxiyhnt" path="res://Escenas/BarraVida.tscn" id="6_m4y7k"]
+[ext_resource type="Script" uid="uid://bymsbvohendok" path="res://Scripts/ZonaAtraccion.gd" id="7_kfutn"]
+[ext_resource type="Script" uid="uid://c0ca2tckqkfti" path="res://Scripts/Separacion.gd" id="8_6na2g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m4y7k"]
+radius = 262.84024
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kfutn"]
+radius = 19.026299
+
+[node name="BuenoConstructor" type="CharacterBody2D" unique_id=1227102024 groups=["buenos"]]
+collision_mask = 6
+script = ExtResource("1_bn10n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=188561522]
+texture = ExtResource("2_qpjxd")
+
+[node name="Stats" type="Node" parent="." unique_id=463990515]
+script = ExtResource("3_tsqck")
+vida_maxima = 10
+dany = 3
+cooldown_ataque = 0.5
+rango_ataque_tiles = 7.0
+velocidad_movimiento = 20.0
+rango_vision_tiles = 10.0
+tamano_tile = 16.0
+categoria = "Constructor"
+
+[node name="Emoji" type="Label" parent="." unique_id=721172042]
+offset_left = -14.0
+offset_top = -18.0
+offset_right = 24.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 24
+text = "👷"
+
+[node name="IABueno" type="Node2D" parent="." unique_id=1088531104]
+script = ExtResource("5_tsqck")
+
+[node name="BarraVida" parent="." unique_id=154126038 instance=ExtResource("6_m4y7k")]
+
+[node name="BordeVerde" type="Node2D" parent="." unique_id=1876512559]
+scale = Vector2(0.6, 0.6)
+script = ExtResource("6_kfutn")
+tamano = Vector2(66, 66)
+
+[node name="ZonaAtraccion" type="Area2D" parent="." unique_id=979693581]
+collision_layer = 2
+collision_mask = 8
+script = ExtResource("7_kfutn")
+intervalo_emision = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaAtraccion" unique_id=1496723336]
+shape = SubResource("CircleShape2D_m4y7k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1333630698]
+shape = SubResource("CircleShape2D_kfutn")
+
+[node name="Separacion" type="Node2D" parent="." unique_id=1749928475]
+script = ExtResource("8_6na2g")
+radio_separacion = 60.0
+fuerza_separacion = 15.0
+masa = 3.0

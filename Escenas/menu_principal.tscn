@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cag5jkogxk82f"]
+
+[ext_resource type="Script" uid="uid://dge7neop8a84b" path="res://Scripts/menu_principal.gd" id="1_xv3xs"]
+
+[node name="MenuPrincipal" type="Control" unique_id=1776054294]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_xv3xs")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=901859701]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.14000404, 0.39398772, 0.2445769, 1)
+
+[node name="ButtonJugar" type="Button" parent="." unique_id=183658131]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 170.0
+offset_right = 483.0
+offset_bottom = 451.0
+theme_override_font_sizes/font_size = 200
+text = "🎮"
+
+[node name="ButtonSalir" type="Button" parent="." unique_id=826349450]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 170.0
+offset_right = 933.0
+offset_bottom = 451.0
+theme_override_font_sizes/font_size = 200
+text = "❌"

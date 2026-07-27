@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cu7wh5k6xuyp"]
+
+[ext_resource type="Script" uid="uid://b1575cei0dct0" path="res://Scripts/TooltipGlobal.gd" id="1_ckp8t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghow5"]
+bg_color = Color(0.09815248, 0.122904934, 0.21204224, 1)
+corner_detail = 10
+
+[node name="TooltipGlobal" type="PanelContainer" unique_id=1978479219]
+offset_right = 82.0
+offset_bottom = 50.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ghow5")
+script = ExtResource("1_ckp8t")
+
+[node name="Label" type="Label" parent="." unique_id=1782134840]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14

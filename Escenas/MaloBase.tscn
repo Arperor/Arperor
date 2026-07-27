@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://d35mtky80733l"]
+
+[ext_resource type="Texture2D" uid="uid://4rmrhnbekvd5" path="res://Texturas/Malotítulo.png" id="2_j5s07"]
+[ext_resource type="Script" uid="uid://b3b1vfcsl3dvd" path="res://Scripts/IA.gd" id="3_61qcf"]
+[ext_resource type="Script" uid="uid://bi2fq6kpda78e" path="res://Scripts/Stats.gd" id="3_ak8sd"]
+[ext_resource type="PackedScene" uid="uid://cr77h3wxiyhnt" path="res://Escenas/BarraVida.tscn" id="4_j5s07"]
+[ext_resource type="Script" uid="uid://c0ca2tckqkfti" path="res://Scripts/Separacion.gd" id="5_ak8sd"]
+[ext_resource type="Script" uid="uid://soc1rf3jibdm" path="res://Scripts/BordeSeleccion.gd" id="6_bl56r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dpkvr"]
+radius = 19.026299
+
+[node name="MaloBase" type="CharacterBody2D" unique_id=1291940201 groups=["malos", "unidades_ia"]]
+collision_layer = 8
+collision_mask = 11
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=18698431]
+texture = ExtResource("2_j5s07")
+
+[node name="Stats" type="Node" parent="." unique_id=705014219]
+script = ExtResource("3_ak8sd")
+vida_maxima = 10
+dany = 2
+cooldown_ataque = 0.2
+rango_ataque_tiles = 3.0
+velocidad_movimiento = 16.0
+rango_vision_tiles = 60.0
+tamano_tile = 16.0
+categoria = "MaloBase"
+
+[node name="Emoji" type="Label" parent="." unique_id=2044541824]
+offset_left = -16.0
+offset_top = -18.0
+offset_right = 24.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 24
+text = "🧟‍♂️"
+
+[node name="IA" type="Node2D" parent="." unique_id=207624891]
+script = ExtResource("3_61qcf")
+limite_x = 8888.0
+limite_y = 8888.0
+distancia_activacion = 400.0
+probabilidad_despertar = 0.1
+
+[node name="BarraVida" parent="." unique_id=154126038 instance=ExtResource("4_j5s07")]
+
+[node name="Separacion" type="Node2D" parent="." unique_id=2088028822]
+script = ExtResource("5_ak8sd")
+radio_separacion = 60.0
+fuerza_separacion = 0.0
+masa = 3.0
+
+[node name="BordeRojo" type="Node2D" parent="." unique_id=651203954]
+scale = Vector2(0.6, 0.6)
+script = ExtResource("6_bl56r")
+color_borde = Color(0.87410676, 0, 0.13512963, 1)
+tamano = Vector2(66, 66)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=494660725]
+shape = SubResource("CircleShape2D_dpkvr")

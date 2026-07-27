@@ -1,0 +1,566 @@
+[gd_scene format=3 uid="uid://ddvb2xknoj7nw"]
+
+[ext_resource type="Script" uid="uid://bldhymxfrp3wh" path="res://Scripts/SelectionManager.gd" id="1_n0mq6"]
+[ext_resource type="Texture2D" uid="uid://b8btsd8khablg" path="res://Texturas/Pasto.png" id="1_qxxan"]
+[ext_resource type="Texture2D" uid="uid://c2b1d401qyhu" path="res://Texturas/agua.png" id="2_j1p1g"]
+[ext_resource type="PackedScene" uid="uid://cxgosjkuw3l5g" path="res://Escenas/BuenoSoldado.tscn" id="3_4qbbr"]
+[ext_resource type="Texture2D" uid="uid://cxxdo5veh3l6k" path="res://Texturas/Bosque.png" id="3_mmo3j"]
+[ext_resource type="PackedScene" uid="uid://dnl26advxgaw1" path="res://Escenas/BuenoConstructor.tscn" id="3_n0mq6"]
+[ext_resource type="Script" uid="uid://w7ceyrx6t11o" path="res://Scripts/CamaraRTS.gd" id="3_nrv1i"]
+[ext_resource type="Script" uid="uid://b1nmkjm0mo28o" path="res://Scripts/ContadorMuertes.gd" id="3_rnwnl"]
+[ext_resource type="PackedScene" uid="uid://pxyuh6s5m572" path="res://Escenas/BuenoExploradoror.tscn" id="4_h4gc8"]
+[ext_resource type="Texture2D" uid="uid://dacg25hm3fany" path="res://Texturas/Chatarra.png" id="4_ruk7o"]
+[ext_resource type="Texture2D" uid="uid://373plm6lce37" path="res://Texturas/Mineral.png" id="5_vqdeq"]
+[ext_resource type="Texture2D" uid="uid://d2d2c4w01bhy3" path="res://Texturas/Montaña.png" id="6_mmo3j"]
+[ext_resource type="PackedScene" uid="uid://d35mtky80733l" path="res://Escenas/MaloBase.tscn" id="6_rnwnl"]
+[ext_resource type="Script" uid="uid://dumsobxphdqn8" path="res://Scripts/InputHandler.gd" id="8_b7v2v"]
+[ext_resource type="Script" uid="uid://ck30qf8dwdwoa" path="res://Scripts/Eventos.gd" id="8_rnwnl"]
+[ext_resource type="Script" uid="uid://dpryjychbs8md" path="res://Scripts/Spawner.gd" id="10_31rx1"]
+[ext_resource type="Script" uid="uid://cdd8bep0d8fqq" path="res://Scripts/BotonMenu.gd" id="10_bm6o8"]
+[ext_resource type="Script" uid="uid://dchigkxx34hx" path="res://Scripts/Constructor.gd" id="11_bm6o8"]
+[ext_resource type="Script" uid="uid://yce30jmak0w4" path="res://Scripts/Contadordinero.gd" id="12_y0ou7"]
+[ext_resource type="Script" uid="uid://bpph5b1s6f83l" path="res://Scripts/ContadorPoblacion.gd" id="13_43si6"]
+[ext_resource type="Script" uid="uid://5giigp1gmib3" path="res://Scripts/PanelBase.gd" id="14_1s6rg"]
+[ext_resource type="Script" uid="uid://d3eu0k6t70ml8" path="res://Scripts/PanelConstructor.gd" id="15_o3fjx"]
+[ext_resource type="Script" uid="uid://k5pr2h7fyoc1" path="res://Scripts/NieblaDeGuerra.gd" id="18_o1wdw"]
+[ext_resource type="Script" uid="uid://cvunq2e2asoki" path="res://Scripts/ContadorComida.gd" id="19_ruk7o"]
+[ext_resource type="Script" uid="uid://2ti08duw6s2p" path="res://Scripts/GeneradorRecursos.gd" id="20_7k6j5"]
+[ext_resource type="Script" uid="uid://d1k8uqhxqo76i" path="res://Scripts/ContadorMadera.gd" id="20_vqdeq"]
+[ext_resource type="Script" uid="uid://k8iaip3buvu6" path="res://Scripts/ContadorMineral.gd" id="21_vhteb"]
+[ext_resource type="Script" uid="uid://bd48300i3p5lo" path="res://Scripts/ContadorChatarra.gd" id="22_vcfbv"]
+[ext_resource type="Script" uid="uid://b5xn4i4jat7ky" path="res://Scripts/PanelCuartel.gd" id="25_2y54n"]
+[ext_resource type="Script" uid="uid://dnajq02dnlq2c" path="res://Scripts/Minimapa.gd" id="28_634gq"]
+[ext_resource type="PackedScene" uid="uid://cu7wh5k6xuyp" path="res://Escenas/TooltipGlobal.tscn" id="28_xc5m6"]
+
+[sub_resource type="TileSet" id="TileSet_q6r6c"]
+tile_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j1p1g"]
+texture = ExtResource("1_qxxan")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mmo3j"]
+texture = ExtResource("3_mmo3j")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ruk7o"]
+texture = ExtResource("5_vqdeq")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqdeq"]
+texture = ExtResource("2_j1p1g")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xc5m6"]
+texture = ExtResource("4_ruk7o")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vhteb"]
+resource_name = "Montaña"
+texture = ExtResource("6_mmo3j")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ruk7o"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_j1p1g")
+sources/1 = SubResource("TileSetAtlasSource_mmo3j")
+sources/2 = SubResource("TileSetAtlasSource_ruk7o")
+sources/3 = SubResource("TileSetAtlasSource_vqdeq")
+sources/4 = SubResource("TileSetAtlasSource_xc5m6")
+sources/5 = SubResource("TileSetAtlasSource_vhteb")
+
+[sub_resource type="GDScript" id="GDScript_634gq"]
+script/source = "# GestorOrdenes.gd
+extends Node
+
+var unidades_seleccionadas: Array = []
+
+func _input(event):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		if unidades_seleccionadas.size() > 0:
+			var click_pos = get_viewport().get_mouse_position()
+			var mundo_pos = get_tree().current_scene.get_global_mouse_position()
+			
+			for unidad in unidades_seleccionadas:
+				if unidad.has_method(\"orden_mover_a\"):
+					unidad.orden_mover_a(mundo_pos)
+
+func seleccionar_unidad(unidad):
+	if not unidad in unidades_seleccionadas:
+		unidades_seleccionadas.append(unidad)
+
+func deseleccionar_unidad(unidad):
+	unidades_seleccionadas.erase(unidad)
+
+func deseleccionar_todo():
+	unidades_seleccionadas.clear()
+"
+
+[node name="Mapa" type="Node2D" unique_id=1916487744]
+
+[node name="Suelo" type="TileMap" parent="." unique_id=1998796228]
+tile_set = SubResource("TileSet_q6r6c")
+format = 2
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Suelo" unique_id=1970054069]
+tile_set = SubResource("TileSet_ruk7o")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=638681735 groups=["camara"]]
+script = ExtResource("3_nrv1i")
+limite_x = 8000.0
+limite_y = 8000.0
+
+[node name="UnidadesBuenas" type="Node2D" parent="." unique_id=1233310820]
+
+[node name="BuenoSoldado" parent="UnidadesBuenas" unique_id=1227102024 instance=ExtResource("3_4qbbr")]
+position = Vector2(-101, 0)
+
+[node name="BuenoConstructor" parent="UnidadesBuenas" unique_id=2126997554 instance=ExtResource("3_n0mq6")]
+
+[node name="BuenoExplorador" parent="UnidadesBuenas" unique_id=1156290995 instance=ExtResource("4_h4gc8")]
+position = Vector2(-55, 46)
+
+[node name="BuenoExplorador2" parent="UnidadesBuenas" unique_id=1095914059 instance=ExtResource("4_h4gc8")]
+position = Vector2(-51, -44)
+
+[node name="BuenoExplorador3" parent="UnidadesBuenas" unique_id=1570478116 instance=ExtResource("4_h4gc8")]
+position = Vector2(54, -45)
+
+[node name="BuenoExplorador4" parent="UnidadesBuenas" unique_id=1134014797 instance=ExtResource("4_h4gc8")]
+position = Vector2(55, 46)
+
+[node name="UnidadesMalas" type="Node2D" parent="." unique_id=764756199]
+
+[node name="MaloBase" parent="UnidadesMalas" unique_id=1291940201 instance=ExtResource("6_rnwnl")]
+position = Vector2(-415, -183)
+
+[node name="SelectionManager" type="Node2D" parent="." unique_id=2022491385]
+script = ExtResource("1_n0mq6")
+
+[node name="InputHandler" type="Node2D" parent="SelectionManager" unique_id=1430909001]
+script = ExtResource("8_b7v2v")
+
+[node name="Spawner" type="Node2D" parent="." unique_id=1107157122]
+script = ExtResource("10_31rx1")
+escena_enemigo = ExtResource("6_rnwnl")
+enemigos_iniciales = 1
+limite_poblacion_malos = 1800
+spawn_rate_borde = 0.0
+cantidad_grupo_borde = 0
+spawn_rate_anillo = 0.1
+cantidad_grupo_anillo = 1
+variacion_temporizador = 1.0
+tamano_horda = 11
+tiempo_inicio_hordas = 240.0
+
+[node name="Eventos" type="Node" parent="." unique_id=764682222]
+script = ExtResource("8_rnwnl")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=112932662]
+layer = 0
+
+[node name="BotonMenu" type="Button" parent="UI" unique_id=728423691]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -47.0
+offset_bottom = 53.0
+grow_horizontal = 0
+pivot_offset = Vector2(20, 20)
+pivot_offset_ratio = Vector2(20, 20)
+theme_override_font_sizes/font_size = 32
+text = "🏠"
+flat = true
+script = ExtResource("10_bm6o8")
+
+[node name="ContadorMuertes" type="Label" parent="UI" unique_id=2136508981]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -45.0
+offset_right = 38.0
+grow_vertical = 0
+pivot_offset = Vector2(20, 20)
+pivot_offset_ratio = Vector2(20, 20)
+theme_override_font_sizes/font_size = 20
+text = "💀"
+horizontal_alignment = 2
+script = ExtResource("3_rnwnl")
+
+[node name="Dinero" type="Label" parent="UI" unique_id=656933799]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -136.0
+offset_right = 38.0
+offset_bottom = -91.0
+grow_vertical = 0
+pivot_offset = Vector2(20, 20)
+pivot_offset_ratio = Vector2(20, 20)
+theme_override_font_sizes/font_size = 20
+text = "🍻"
+horizontal_alignment = 2
+script = ExtResource("12_y0ou7")
+
+[node name="Comida" type="Label" parent="UI" unique_id=2029456334]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -171.0
+offset_right = 40.0
+offset_bottom = -126.0
+grow_vertical = 0
+pivot_offset = Vector2(20, 20)
+pivot_offset_ratio = Vector2(20, 20)
+theme_override_font_sizes/font_size = 20
+text = "🥧"
+horizontal_alignment = 2
+script = ExtResource("19_ruk7o")
+
+[node name="Madera" type="Label" parent="UI" unique_id=172100072]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -209.0
+offset_right = 36.0
+offset_bottom = -164.0
+grow_vertical = 0
+pivot_offset = Vector2(20, 20)
+pivot_offset_ratio = Vector2(20, 20)
+theme_override_font_sizes/font_size = 20
+text = "🌲"
+horizontal_alignment = 2
+script = ExtResource("20_vqdeq")
+
+[node name="Mineral" type="Label" parent="UI" unique_id=565420542]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -245.0
+offset_right = 38.0
+offset_bottom = -200.0
+grow_vertical = 0
+pivot_offset = Vector2(20, 20)
+pivot_offset_ratio = Vector2(20, 20)
+theme_override_font_sizes/font_size = 20
+text = "💎"
+horizontal_alignment = 2
+script = ExtResource("21_vhteb")
+
+[node name="Chatarra" type="Label" parent="UI" unique_id=1183370885]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -282.0
+offset_right = 38.0
+offset_bottom = -237.0
+grow_vertical = 0
+pivot_offset = Vector2(20, 20)
+pivot_offset_ratio = Vector2(20, 20)
+theme_override_font_sizes/font_size = 20
+text = "⚙"
+horizontal_alignment = 2
+script = ExtResource("22_vcfbv")
+
+[node name="Poblacion" type="Label" parent="UI" unique_id=1315598254]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -91.0
+offset_right = 39.0
+offset_bottom = -46.0
+grow_vertical = 0
+pivot_offset = Vector2(20, 20)
+pivot_offset_ratio = Vector2(20, 20)
+theme_override_font_sizes/font_size = 20
+text = "👨‍👩‍👧‍👦"
+horizontal_alignment = 2
+script = ExtResource("13_43si6")
+
+[node name="PanelBase" type="HBoxContainer" parent="UI" unique_id=1374406737]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("14_1s6rg")
+escena_constructor = ExtResource("3_n0mq6")
+escena_explorador = ExtResource("4_h4gc8")
+
+[node name="BotonConstructor" type="Button" parent="UI/PanelBase" unique_id=1582883143]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "👷"
+flat = true
+
+[node name="PanelCuartel" type="VBoxContainer" parent="UI" unique_id=1437626774]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -50.0
+offset_bottom = 3.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("25_2y54n")
+
+[node name="BotonExplorador" type="Button" parent="UI/PanelCuartel" unique_id=432198665]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "🏹"
+flat = true
+
+[node name="BotonSoldado" type="Button" parent="UI/PanelCuartel" unique_id=49792155]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "💪"
+flat = true
+
+[node name="BotonSniper" type="Button" parent="UI/PanelCuartel" unique_id=394867016]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "🔭"
+flat = true
+
+[node name="PanelConstructor" type="VBoxContainer" parent="UI" unique_id=1625710237]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -52.0
+offset_top = -476.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("15_o3fjx")
+
+[node name="BotonReparar" type="Button" parent="UI/PanelConstructor" unique_id=581003187]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "🔧"
+flat = true
+
+[node name="BotonMuro" type="Button" parent="UI/PanelConstructor" unique_id=1517440517]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "🧱"
+flat = true
+
+[node name="BotonAlmacen" type="Button" parent="UI/PanelConstructor" unique_id=1783451336]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "📦"
+flat = true
+
+[node name="BotonAsserradero" type="Button" parent="UI/PanelConstructor" unique_id=1204194087]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "🪓"
+flat = true
+
+[node name="BotonGranja" type="Button" parent="UI/PanelConstructor" unique_id=1145931538]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "👨‍🌾"
+flat = true
+
+[node name="BotonPuerto" type="Button" parent="UI/PanelConstructor" unique_id=1892096200]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "🎣"
+flat = true
+
+[node name="BotonChatarreria" type="Button" parent="UI/PanelConstructor" unique_id=1174864251]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "⚙"
+flat = true
+
+[node name="BotonMina" type="Button" parent="UI/PanelConstructor" unique_id=1973453914]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "⛏"
+flat = true
+
+[node name="BotonTorre" type="Button" parent="UI/PanelConstructor" unique_id=867692073]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "🎚"
+flat = true
+
+[node name="BotonCuartel" type="Button" parent="UI/PanelConstructor" unique_id=824775221]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "🏋️‍♂️"
+flat = true
+
+[node name="BotonCasa" type="Button" parent="UI/PanelConstructor" unique_id=602914500]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "🏘"
+flat = true
+
+[node name="BotonBase" type="Button" parent="UI/PanelConstructor" unique_id=863895256]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "🛕"
+flat = true
+
+[node name="DialogoConfirmacion" type="ConfirmationDialog" parent="UI" unique_id=1626427506]
+oversampling_override = 1.0
+initial_position = 4
+size = Vector2i(277, 80)
+content_scale_aspect = 4
+ok_button_text = "👍👋"
+dialog_text = "                           ❓👋"
+cancel_button_text = "❌"
+
+[node name="TooltipGlobal" parent="UI" unique_id=1978479219 instance=ExtResource("28_xc5m6")]
+
+[node name="Minimapa" type="Control" parent="UI" unique_id=273486365]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("28_634gq")
+
+[node name="Fondo" type="ColorRect" parent="UI/Minimapa" unique_id=747520226]
+layout_mode = 0
+offset_right = 210.0
+offset_bottom = 210.0
+color = Color(0, 0.3256114, 0.32595536, 1)
+
+[node name="TextureRect" type="TextureRect" parent="UI/Minimapa" unique_id=185880148]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 205.0
+offset_bottom = 205.0
+
+[node name="InputArea" type="Control" parent="UI/Minimapa" unique_id=490066235]
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 205.0
+offset_bottom = 205.0
+
+[node name="Constructor" type="Node" parent="." unique_id=1717350245]
+script = ExtResource("11_bm6o8")
+
+[node name="NieblaDeGuerra" type="Node2D" parent="." unique_id=1719946895]
+script = ExtResource("18_o1wdw")
+limite_x = 9999.0
+limite_y = 9999.0
+actualizaciones_por_segundo = 6.0
+
+[node name="SpriteNiebla" type="Sprite2D" parent="NieblaDeGuerra" unique_id=311675174]
+centered = false
+
+[node name="GestorOrdenes" type="Node" parent="." unique_id=346598928]
+script = SubResource("GDScript_634gq")
+
+[node name="GeneradorRecursos" type="Node" parent="." unique_id=1367825725]
+script = ExtResource("20_7k6j5")
+semilla = 0
+radio_extraccion = 0.0
+freq_bosque = 0.001
+"freq_montaña" = 0.001
+freq_agua = 0.002
+umbral_agua = 0.55
+"umbral_montaña" = 0.5
+umbral_bosque = 0.5
+umbral_mineral = 0.65
+octavas_agrupados = 2
+octavas_dispersos = 9

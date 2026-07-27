@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cr77h3wxiyhnt"]
+
+[ext_resource type="Script" uid="uid://g55ylp8svukf" path="res://Scripts/BarraVida.gd" id="1_1ynll"]
+
+[node name="BarraVida" type="Node2D" unique_id=154126038]
+script = ExtResource("1_1ynll")
+
+[node name="Fondo" type="ColorRect" parent="." unique_id=522359613]
+offset_left = -20.0
+offset_top = -30.0
+offset_right = 20.0
+offset_bottom = -24.0
+color = Color(0.2509804, 0.011764706, 0, 1)
+
+[node name="Relleno" type="ColorRect" parent="." unique_id=2091465762]
+offset_left = -20.0
+offset_top = -30.0
+offset_right = 20.0
+offset_bottom = -24.0
+color = Color(0.62352943, 0.011764706, 0, 1)

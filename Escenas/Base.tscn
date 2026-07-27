@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://ba0f84hso4xxn"]
+
+[ext_resource type="Texture2D" uid="uid://na3ic7etrq3r" path="res://Texturas/1781947722.png" id="1_0g1rt"]
+[ext_resource type="Script" uid="uid://bi2fq6kpda78e" path="res://Scripts/Stats.gd" id="1_auqgh"]
+[ext_resource type="Script" uid="uid://cvne81bl42faf" path="res://Scripts/Edificio.gd" id="1_inyou"]
+[ext_resource type="PackedScene" uid="uid://cr77h3wxiyhnt" path="res://Escenas/BarraVida.tscn" id="2_0g1rt"]
+[ext_resource type="Script" uid="uid://soc1rf3jibdm" path="res://Scripts/BordeSeleccion.gd" id="5_hkjak"]
+[ext_resource type="Script" uid="uid://bymsbvohendok" path="res://Scripts/ZonaAtraccion.gd" id="6_0cpy6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_inyou"]
+size = Vector2(192, 192)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0cpy6"]
+radius = 509.3545
+
+[node name="Base" type="CharacterBody2D" unique_id=107026138 groups=["buenos"]]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource("1_inyou")
+coste_construccion = {
+"dinero": 1
+}
+coste_poblacion = 0
+generacion_dinero = 10
+tamano_tiles = Vector2(3, 3)
+enemigos_al_morir = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=188070795]
+scale = Vector2(3, 3)
+texture = ExtResource("1_0g1rt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=605197390]
+shape = SubResource("RectangleShape2D_inyou")
+
+[node name="Stats" type="Node" parent="." unique_id=6037012]
+script = ExtResource("1_auqgh")
+vida_maxima = 50
+dany = 0
+cooldown_ataque = 0.0
+rango_ataque_tiles = 0.0
+velocidad_movimiento = 0.0
+rango_vision_tiles = 40.0
+tamano_tile = 16.0
+categoria = "Base"
+
+[node name="BarraVida" parent="." unique_id=154126038 instance=ExtResource("2_0g1rt")]
+position = Vector2(0, 5)
+scale = Vector2(3.2, 3.2)
+
+[node name="BordeVerde" type="Node2D" parent="." unique_id=1652241610]
+script = ExtResource("5_hkjak")
+tamano = Vector2(195, 195)
+
+[node name="ZonaAtraccion" type="Area2D" parent="." unique_id=1211733465]
+collision_layer = 2
+collision_mask = 8
+script = ExtResource("6_0cpy6")
+intervalo_emision = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaAtraccion" unique_id=797955895]
+shape = SubResource("CircleShape2D_0cpy6")
+
+[node name="Emoji" type="Label" parent="." unique_id=1834476578]
+offset_left = -101.0
+offset_top = -112.0
+offset_right = 101.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 147
+text = "🛕"

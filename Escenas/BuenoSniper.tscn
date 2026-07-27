@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://d15y5phhli4nf"]
+
+[ext_resource type="Script" uid="uid://cp0bajm6o7s5f" path="res://Scripts/BuenoConstructor.gd" id="1_eb6s4"]
+[ext_resource type="Texture2D" uid="uid://2ouhoohgp2sk" path="res://Texturas/enemigi.png" id="2_yg0yg"]
+[ext_resource type="Script" uid="uid://bi2fq6kpda78e" path="res://Scripts/Stats.gd" id="3_lqhei"]
+[ext_resource type="PackedScene" uid="uid://bgjq3c74ha4ie" path="res://Escenas/proyectil.tscn" id="4_c0ka5"]
+[ext_resource type="Script" uid="uid://by8jq08suc6fk" path="res://Scripts/IABueno.gd" id="5_7kx14"]
+[ext_resource type="PackedScene" uid="uid://cr77h3wxiyhnt" path="res://Escenas/BarraVida.tscn" id="6_ka2me"]
+[ext_resource type="Script" uid="uid://soc1rf3jibdm" path="res://Scripts/BordeSeleccion.gd" id="7_d17vw"]
+[ext_resource type="Script" uid="uid://bymsbvohendok" path="res://Scripts/ZonaAtraccion.gd" id="8_h5tc2"]
+[ext_resource type="Script" uid="uid://c0ca2tckqkfti" path="res://Scripts/Separacion.gd" id="9_7wxlf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sxmgp"]
+radius = 346.02313
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dveaa"]
+radius = 19.026299
+
+[node name="BuenoSniper" type="CharacterBody2D" unique_id=1227102024 groups=["buenos"]]
+collision_mask = 6
+script = ExtResource("1_eb6s4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=188561522]
+texture = ExtResource("2_yg0yg")
+
+[node name="Stats" type="Node" parent="." unique_id=463990515]
+script = ExtResource("3_lqhei")
+vida_maxima = 30
+dany = 40
+cooldown_ataque = 2.0
+rango_ataque_tiles = 20.0
+escena_proyectil = ExtResource("4_c0ka5")
+velocidad_movimiento = 10.0
+rango_vision_tiles = 22.0
+tamano_tile = 16.0
+categoria = "Sniper"
+
+[node name="Emoji" type="Label" parent="." unique_id=721172042]
+offset_left = -16.0
+offset_top = -18.0
+offset_right = 24.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 24
+text = "🔭"
+
+[node name="IABueno" type="Node2D" parent="." unique_id=1088531104]
+script = ExtResource("5_7kx14")
+
+[node name="BarraVida" parent="." unique_id=154126038 instance=ExtResource("6_ka2me")]
+
+[node name="BordeVerde" type="Node2D" parent="." unique_id=1310359512]
+scale = Vector2(0.6, 0.6)
+script = ExtResource("7_d17vw")
+tamano = Vector2(66, 66)
+
+[node name="ZonaAtraccion" type="Area2D" parent="." unique_id=2033561431]
+collision_layer = 2
+collision_mask = 8
+script = ExtResource("8_h5tc2")
+intervalo_emision = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaAtraccion" unique_id=739112836]
+shape = SubResource("CircleShape2D_sxmgp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1876962903]
+shape = SubResource("CircleShape2D_dveaa")
+
+[node name="Separacion" type="Node2D" parent="." unique_id=1317994842]
+script = ExtResource("9_7wxlf")
+radio_separacion = 60.0
+fuerza_separacion = 15.0
+masa = 3.0

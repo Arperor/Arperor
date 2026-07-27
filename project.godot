@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Arperor"
+run/main_scene="uid://cag5jkogxk82f"
+config/features=PackedStringArray("4.7", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://lxm7jo0tr8s0"
+Eventos="*uid://ck30qf8dwdwoa"
+EconomiaManager="*uid://brckyfhtfybva"
+DefinicionesUnidades="*uid://r5scymk1px5w"
+FlowfieldManager="*uid://civqsvttmew8f"
+
+[layer_names]
+
+2d_physics/layer_1="Unidades"
+2d_physics/layer_2="ZonaAtraccion"
+2d_physics/layer_3="Proyectiles"
+2d_physics/layer_4="Malos"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+2d/default_linear_damp=0.5
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

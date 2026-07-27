@@ -1,0 +1,11 @@
+﻿# Godot 4+ ignores
+.godot/
+.import/
+export_presets.cfg
+*.tmp
+*.tmp.*
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
