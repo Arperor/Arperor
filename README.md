@@ -25,6 +25,7 @@ zombis simulados en la GPU** (compute shader, Godot 4).
 
 - **X** — <https://x.com/PereBrauMartnez>
 - **Mastodon** (gamedev.place) — <https://mastodon.gamedev.place/@Arperor>
+- **Bluesky** — <https://bsky.app/profile/perebrau.bsky.social>
 - **Reddit** — <https://www.reddit.com/user/ExpensiveAd7387>
 - **Instagram** — <https://www.instagram.com/perebrau/>
 
