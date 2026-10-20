@@ -26,13 +26,15 @@ zombis simulados en la GPU** (compute shader, Godot 4).
 - **X** — <https://x.com/PereBrauMartnez>
 - **Mastodon** (gamedev.place) — <https://mastodon.gamedev.place/@Arperor>
 - **Bluesky** — <https://bsky.app/profile/perebrau.bsky.social>
-- **Reddit** — <https://www.reddit.com/user/ExpensiveAd7387>
 - **Instagram** — <https://www.instagram.com/perebrau/>
+- **Reddit** — <https://www.reddit.com/user/ExpensiveAd7387>
+- **LinkedIn** — <https://www.linkedin.com/in/pere-brau-mart%C3%ADnez-a69679260/>
 
 ## 🗂 Fichas
 
 - **IndieDB** — <https://www.indiedb.com/games/withstand-the-horde>
 - **ModDB** — <https://www.moddb.com/games/withstand-the-horde>
+- **Facebook** — <https://www.facebook.com/profile.php?id=61595306654659>
 
 ---
 
