@@ -50,6 +50,22 @@ la GPU, así que miles de zombis se mueven a la vez en un portátil normal.
 
 Hecho por una sola persona en **Godot 4**.
 
+## 🎓 Repositorios de ASIX (CFGS)
+
+Trabajos del ciclo **Administración de Sistemas Informáticos en Red**. Son
+proyectos pequeños y cerrados, cada uno con su README y sus datos de ejemplo:
+
+| Repositorio | Qué es | Lenguaje |
+|---|---|---|
+| [mysql-empleats](https://github.com/Arperor/mysql-empleats) | Diez rutinas de MySQL con validación y gestión de errores (`SIGNAL SQLSTATE`) | SQL |
+| [tasca8-supermercat](https://github.com/Arperor/tasca8-supermercat) | Análisis de ventas con pandas y seaborn, panel en Streamlit y regresión lineal | Python |
+| [powershell-toolkit](https://github.com/Arperor/powershell-toolkit) | Menú de inventario de Windows: usuarios, procesos, servicios y conexiones TCP | PowerShell |
+
+**Certificaciones:** [Credly](https://www.credly.com/users/pere-brau-martinez) ·
+dos insignias de Red Hat (RH104 y RH124).
+
+---
+
 ## Código
 
 Este repositorio guarda el proyecto de Godot (`Escenas/`, `Scripts/`,
